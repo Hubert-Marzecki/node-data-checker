@@ -1,6 +1,5 @@
 <template>
-  <div id="app " class="container mx-auto px-4">
-     <div class="container mx-auto ">
+  <div class="container mx-auto ">
     <h1 class="section__header mt-10 mb-4">INSERT TEXT TO CHECK ON WEBISTE</h1>
 
   <div class=" mb-10">
@@ -18,21 +17,12 @@
     ADD ANOTHER COPY FIELD
     </button>
   </div>
-
-    <div class="mx-auto w-48 ">
-      <button
-        class="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded center mt-4"
-        @click="checkData"
-      >
-        CHECK DATA
-      </button>
-    </div>
-  </div>
 </template>
 
 <script>
+import { bus } from '../main';
 export default {
-  name: "App",
+  name: "InputFields",
   data() {
     return {
       copys: [""],
@@ -42,23 +32,21 @@ export default {
     addField(e)  {
         this.copys.push(e.target.value)
     },
-    updateValue(x, e) {
+    updateValue(x,e) {
       this.copys[x] = e;
-    },
-     checkData() {
-      axios.push
-    },
-  },
-
+  }
+  }
 };
 </script>
 
 <style>
-.section__header {
+
+.section__header{
   font-size: 1.6em;
   font-weight: 700;
 }
-input {
-  background-color: lightblue;
+.input-field{
+  background-color:lightblue;
 }
+
 </style>
